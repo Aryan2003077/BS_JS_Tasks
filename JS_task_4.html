@@ -1,0 +1,37 @@
+<!-- JavaScript task-04 Submitted by Aryan Thapliyal 21BCE2709 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time and Date Display</title>
+  </head>
+  <body>
+    <button id="showTimeButton">Show Time</button><br />
+
+    <p id="output1"></p>
+    <button id="showDateButton">Show Date</button>
+    <p id="output2"></p>
+    <a href="JS_task_5.html">Click here for task-05 of JS</a>
+    <br />
+    <a href="JS_task_3.html">Click here to go back</a>
+    <br />
+    <a href="index.html">Go Home</a>
+    <script>
+      const showTimeButton = document.getElementById("showTimeButton");
+      const showDateButton = document.getElementById("showDateButton");
+      const output1 = document.getElementById("output1");
+      const output2 = document.getElementById("output2");
+
+      showTimeButton.addEventListener("click", () => {
+        const currentTime = new Date().toLocaleTimeString();
+        output1.textContent = `Current Time: ${currentTime}`;
+      });
+
+      showDateButton.addEventListener("click", () => {
+        const currentDate = new Date().toLocaleDateString();
+        output2.textContent = `Current Date: ${currentDate}`;
+      });
+    </script>
+  </body>
+</html>
